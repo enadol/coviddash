@@ -1,2 +1,2 @@
 # coviddash
-An interactive dashboard with coronavirus data for Mexico.
+An interactive dashboard with coronavirus data for Mexico with RMarkdown.
