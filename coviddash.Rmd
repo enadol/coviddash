@@ -202,19 +202,21 @@ plotly::plot_ly(data = df_daily) %>%
     line = list(color = death_color),
     marker = list(color = death_color)
   ) %>%
-  # plotly::add_annotations(
-  #   x = as.Date("2020-02-04"),
-  #   y = 1,
-  #   text = paste("First case"),
-  #   xref = "x",
-  #   yref = "y",
-  #   arrowhead = 5,
-  #   arrowhead = 3,
-  #   arrowsize = 1,
-  #   showarrow = TRUE,
-  #   ax = -10,
-  #   ay = -90
-  # ) %>%
+   plotly::add_annotations(
+     x = as.Date("2021-02-16"),
+     y = df_daily$confirmed_cum[392],
+     text = paste("Two million cases /
+     One million vaccinations 
+                 (Feb. 16, 2021)"),
+     xref = "x",
+     yref = "y",
+     arrowhead = 3,
+     arrowhead = 1,
+     arrowsize = 1,
+     showarrow = TRUE,
+     ax = -60,
+     ay = 140
+   ) %>%
   plotly::add_annotations(
     x = as.Date("2020-03-19"),
     y = 3,
@@ -271,7 +273,7 @@ plotly::plot_ly(data = df_daily) %>%
     arrowsize = 1,
     showarrow = TRUE,
     ax = -60,
-    ay = 120
+    ay = 100
   ) %>% 
 
   plotly::layout(
